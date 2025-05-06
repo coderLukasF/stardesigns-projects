@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The best dog walking services - Paws on the move">
+  <title>Paws on the move - Dog walking services.</title>
+  <script src="mobile-menu.js"></script>
+  <script src="https://kit.fontawesome.com/c190732b6b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="nav-bar.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+    body {
+      margin-top: 16vh;
+    }
+
+    .first-div {
+      width: 100%;
+      font-family: Oswald;
+      background-image: url(/images/walking-dog-photo.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-align: center;
+      margin: auto;
+
+      padding-top: 35px;
+      padding-bottom: 375px;
+    }
+
+    .first-div h1 { 
+      font-size: 80px;
+    }
+
+    .first-div p {
+      font-size: 20px;
+    }
+
+    .first-div button {
+      width: 185px;
+      height: 45px;
+
+      color: black;
+      background-color: rgb(0, 183, 255);
+
+      border: solid;
+      border-color: rgb(255, 255, 255);
+      border-radius: 15px;
+
+      margin-top: 15px;
+
+      transition: background-color 0.15s;
+    }
+
+    .first-div button:hover {
+      background-color: rgb(86, 207, 255);
+    }
+
+    .first-div button:active {
+      background-color: rgb(132, 220, 255);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/images/logo.png" class="nav-logo" onclick="pictureonclick()">
+    <nav>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <a href="pricing-plans.html" class="nav-button">Pricing</a>
+      </ul>
+    </nav>
+  
+  <div class="mobile-nav">
+    <i class="fa-solid fa-bars" onclick="toggleMobileNavBar(this)"></i>
+    <ul class="mobile-links">
+      <img src="images/logo.png" class="nav-logo">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing-plans.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  </header>
+
+  <div class="first-div">
+    <h1>Walking your dog, <span id="changing-text">it can be rough.</span></h1>
+    <p>Walking your dog can be time consuming, hard while trying to get your dog to stop pulling the leash, discusting while picking up poop, and more annoying things. 
+      <strong>If you are tired of this, <br>
+        <a href="pricing.html">
+          <button>buy our services!</button>
+        </a>
+      </strong>
+    </p>
+  </div>
+  
+
+  <script>
+    const changingtext = document.getElementById("changing-text");
+    const disgustingtext = "it can be disgusting.";
+    const roughtext = "it can be rough.";
+
+    function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function deleterough() {
+      let times = 0;
+        
+      while (true) {
+        if (times < roughtext.length) {
+          await wait(100);
+          changingtext.textContent = changingtext.textContent.slice(0, -1);
+          times += 1;
+          console.log(`Add ${times}`)
+        }
+        else {
+          console.log("reset")
+          times = 0;
+          return;
+        }
+      }
+    }
+
+    async function writedisgusting() {
+      let times = 0;
+        
+      while (true) {
+        if (times < disgustingtext.length) {
+          await wait(100);
+          changingtext.innerHTML += disgustingtext.charAt(times)
+          times += 1;
+          console.log(`Add ${times}`)
+        }
+        else {
+          console.log("reset")
+          times = 0;
+          return;
+        }
+      }
+    }
+
+    async function writerough() {
+      let times = 0;
+        
+      while (true) {
+        if (times < roughtext.length) {
+          await wait(100);
+          changingtext.innerHTML += roughtext.charAt(times)
+          times += 1;
+          console.log(`Add ${times}`)
+        }
+        else {
+          console.log("reset")
+          times = 0;
+          return;
+        }
+      }
+    }
+
+    async function deletedisgusting() {
+      let times = 0;
+        
+      while (true) {
+        if (times < 21) {
+          await wait(100);
+          changingtext.textContent = changingtext.textContent.slice(0, -1);
+          times += 1;
+          console.log(`Add ${times}`)
+        }
+        else {
+          console.log("reset")
+          times = 0;
+          return;
+        }
+      }
+    }
+
+    async function changetext() {
+      await wait(3000)
+      deleterough()
+      await wait(2000)
+      writedisgusting()
+      await wait(4100)
+      deletedisgusting()
+      await wait(4300)
+      writerough()
+    }
+
+    async function runchangetext() {
+      while (true) {
+        await changetext()
+      }
+    }
+
+    runchangetext()
+  </script>
+</body>
+</html>

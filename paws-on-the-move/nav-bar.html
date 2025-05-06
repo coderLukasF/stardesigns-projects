@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="nav-bar.css">
+  <script src="mobile-menu.js"></script>
+  <script src="https://kit.fontawesome.com/c190732b6b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <img src="/images/logo.png" class="nav-logo" onclick="pictureonclick()">
+    <nav>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <a href="pricing-plans.html" class="nav-button">Pricing</a>
+      </ul>
+    </nav>
+  
+  <div class="mobile-nav">
+    <i class="fa-solid fa-bars" onclick="toggleMobileNavBar(this)"></i>
+    <ul class="mobile-links">
+      <img src="images/logo.png" class="nav-logo">
+      <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="pricing-plans.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  </header>
+</body>
+</html>
