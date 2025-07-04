@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+
+@font-face {
+  font-family: futuralight;
+  src: url(fonts/futuralight.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppings", sans-serif;
+}
+
+body {
+  background-image: url("images/space-background.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  padding-top: 50px;
+  width: 100%;
+  height: 100vh;
+}
+
+.price-div {
+  background: linear-gradient(
+    0deg,
+    hsla(186, 85%, 19%, 1) 0%,
+    hsla(217, 37%, 22%, 1) 100%
+  );
+  padding: 10% 15%;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  height: 600px;
+  border: solid;
+  border-color: black;
+  opacity: 0;
+  margin: auto;
+
+  animation-name: start;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+
+  --base-margin: 0px;
+  --extra-margin: 70px;
+}
+
+.price-div p {
+  font-family: Tangerine, sans-serif, Arial;
+  font-size: 50px;
+}
+
+.price-div a {
+  color: rgb(126, 208, 255);
+  text-decoration: none;
+}
+
+.price-div a:hover {
+  text-decoration: underline;
+}
+
+.price-div button {
+  font-family: Arial;
+  margin-top: 5vh;
+
+  width: 150px;
+  height: 45px;
+  font-size: 20px;
+
+  background-color: rgb(0, 166, 255);
+  border: solid;
+  border-radius: 7px;
+  cursor: pointer;
+
+  transition: background-color 0.15s;
+}
+
+.price-div button:hover {
+  background-color: rgb(0, 112, 172);
+}
+
+.price-div button:active {
+  margin-top: 5.1vh;
+  background-color: rgb(126, 170, 255);
+}
+
+@keyframes start {
+  0% {
+    opacity: 0;
+    margin-top: calc(var(--base-margin) + var(--extra-margin));
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 888px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .price-row {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .price-div,
+  .price-col-pro {
+    width: 80%;
+    margin: 0;
+  }
+}

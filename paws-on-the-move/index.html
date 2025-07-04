@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The best dog walking services - Paws on the move"
+    />
+    <title>Paws on the move - Dog walking services.</title>
+    <script src="mobile-menu.js"></script>
+    <script src="picture-onclick.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c190732b6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./nav-bar.css" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+      body {
+        margin: 0;
+
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      .first-div {
+        width: 100%;
+        font-family: Oswald;
+        background-image: url(./images/sig-1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        margin: auto;
+        scroll-behavior: smooth;
+
+        padding-top: 185px;
+        padding-bottom: 400px;
+      }
+
+      .first-div-contents {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding-bottom: 15px;
+      }
+
+      .first-div h1 {
+        font-size: 3.5rem;
+        padding: 10px 0;
+      }
+
+      .first-div p {
+        font-size: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      .first-div button {
+        margin: auto;
+        width: 185px;
+        height: 45px;
+
+        color: black;
+        background-color: rgb(0, 183, 255);
+
+        border: solid;
+        border-color: rgb(255, 255, 255);
+        border-radius: 15px;
+        cursor: pointer;
+
+        margin-bottom: 15px;
+
+        transition: background-color 0.15s;
+      }
+
+      .first-div button:hover {
+        background-color: rgb(86, 207, 255);
+      }
+
+      .first-div button:active {
+        background-color: rgb(132, 220, 255);
+      }
+
+      .second-div {
+        display: block;
+        width: 100%;
+        background-color: rgb(31, 31, 31);
+        padding-top: 50px;
+        padding-bottom: 100px;
+      }
+
+      .second-div h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: white;
+        font-family: Oswald;
+      }
+
+      .second-div-muchmore {
+        margin-top: 15px;
+        font-size: 22.5px;
+        font-family: Arial, sans-serif;
+
+        text-align: center;
+        color: white;
+      }
+
+      .reviews {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        gap: 20px;
+      }
+
+      .reviews h1 {
+        padding: 10px 0;
+      }
+
+      .review {
+        padding: 5px;
+        width: auto;
+        display: flex;
+        background-color: rgb(240, 240, 240);
+        border-radius: 10px;
+      }
+
+      .review img {
+        margin-right: 5px;
+        width: 100px;
+        border-radius: 5px;
+      }
+
+      .review h2 {
+        font-family: Oswald, sans-serif, Arial;
+      }
+
+      .review h4 {
+        font-family: Roboto, Arial, sans-serif;
+      }
+
+      .review p {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+      }
+
+      .third-div {
+        background-image: url(./images/walking-dog-photo.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        padding-top: 150px;
+        padding-bottom: 350px;
+      }
+
+      .third-div h1 {
+        font-size: 60px;
+        text-align: center;
+        font-family: Ubuntu, sans-serif;
+
+        color: white;
+      }
+
+      .third-div hr {
+        margin: auto;
+        display: block;
+        border: none;
+        height: 2px;
+        background-color: white;
+
+        margin-bottom: 13.5px;
+      }
+
+      .third-div p {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        font-size: 20px;
+        font-family: Roboto;
+        color: white;
+        width: 85%;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        line-height: 140%;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 5.5%;
+
+        width: 100%;
+        background-color: rgb(27, 27, 27);
+        padding: 15px 0;
+      }
+
+      .pricing-div {
+        width: 27.5%;
+        height: 75vh;
+        padding: 50px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: rgb(0, 185, 176);
+        border: solid;
+        border-width: 5px;
+        border-color: rgb(0, 102, 97);
+
+        border-radius: 10px;
+      }
+
+      .pricing-div h1 {
+        font-family: Roboto;
+        font-size: 41.5px;
+      }
+
+      .pricing-div ul {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .pricing-div li {
+        margin: 5px 0;
+      }
+
+      .pricing-div button {
+        width: 80%;
+        height: 70px;
+        margin: auto;
+
+        background-color: rgb(0, 0, 44);
+        border: solid;
+        border-width: 3px;
+        border-radius: 10px;
+        cursor: pointer;
+        border-color: rgb(135, 255, 255);
+
+        transition: background-color 0.15s;
+      }
+
+      .pricing-div button:hover {
+        background-color: rgb(0, 167, 125);
+      }
+
+      /*#crown {
+      width: 85px;
+      position: absolute;
+
+      top: 153px;
+    }*/
+
+      .pricing-div h1 {
+        color: white;
+      }
+
+      @media (max-width: 970px) {
+        .reviews {
+          flex-direction: column;
+        }
+
+        .container {
+          flex-direction: column;
+        }
+
+        .pricing-div {
+          width: 80%;
+          margin: 10px auto;
+        }
+      }
+
+      @media (max-width: 800px) {
+      }
+
+      @media (max-width: 530px) {
+        .pricing-div h1 {
+          font-size: 20px;
+        }
+      }
+
+      @media (max-width: 590px) {
+        .pricing-div h1 {
+          font-size: 30px;
+        }
+      }
+
+      @media (max-width: 408px) {
+        .pricing-div h1 span {
+          display: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .third-div {
+          background-position: 45% center; /* Slightly to the left */
+        }
+      }
+
+      @media (max-width: 850px) {
+        .first-div {
+          background-position: 25% center; /* Slightly to the left */
+        }
+      }
+
+      @media (max-width: 626px) {
+        .first-div {
+          background-position: 45% center; /* Slightly to the left */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <script src="./nav-bar.js"></script>
+
+    <div class="first-div">
+      <div class="first-div-contents">
+        <h1>
+          Walking your dog, <span id="changing-text">it can be rough.</span>
+        </h1>
+        <p>
+          Walking your dog can be time consuming, hard while trying to get your
+          dog to stop pulling the leash, disgusting while picking up poop, and
+          more annoying things.
+          <br />
+          <strong>
+            If you are tired of this, <br />
+            <a href="/?scroll=2">
+              <button>buy our services!</button>
+            </a>
+          </strong>
+        </p>
+
+        <hr width="35%" style="margin: auto; margin-top: 20px" />
+        <p class="mini-about">
+          We are a dog walking service that goes all over the state, so you
+          don't need to worry about you not being in your city.
+          <br />
+          We also have other services for around the country, such as in
+          Michigan, but with different employees. We are based in California.
+        </p>
+      </div>
+    </div>
+
+    <div class="second-div" id="second-div">
+      <h1>Not convinced? Take a look at our reviews.</h1>
+      <div class="reviews">
+        <div class="review">
+          <img class="review-person" src="./reviews/riley.png" />
+          <div class="review-content">
+            <h2>Riley Morgan</h2>
+            <h4>Best dog walking service ever!</h4>
+            <img
+              src="./reviews/stars/5star.png"
+              alt="5 Stars"
+              class="review-stars"
+            />
+            <p>
+              My dog loved the people, awesome prices for an
+              <b>amazing</b> service.
+            </p>
+          </div>
+        </div>
+
+        <div class="review">
+          <img class="review-person" src="./reviews/jordan.png" />
+          <div class="review-content">
+            <h2>Jordan Revera</h2>
+            <h4>My dog loved it!</h4>
+            <img
+              src="./reviews/stars/4.5stars.png"
+              alt="4.5 Stars"
+              class="review-stars"
+            />
+            <p>
+              Amazing services, I can work while my dog is having her best time
+              of her life!
+            </p>
+          </div>
+        </div>
+
+        <div class="review">
+          <img class="review-person" src="./reviews/skyler.png" />
+          <div class="review-content">
+            <h2>Skyler Bennet</h2>
+            <h4>I can work without pausing to walk my puppy!</h4>
+            <img
+              src="./reviews/stars/5star.png"
+              alt="5 Stars"
+              class="review-stars"
+            />
+            <p>
+              Awesome services! I can finally work at my office without stopping
+              to walk my puppy!
+            </p>
+          </div>
+        </div>
+      </div>
+      <p class="second-div-muchmore">And much more!</p>
+    </div>
+
+    <div class="third-div" id="third-div">
+      <h1>About us</h1>
+      <hr width="35%" />
+      <p>
+        Paws on the Move began in 2010 as a small dog walking service in a quiet
+        neighborhood. The founder, a lifelong animal lover, noticed that many
+        pet owners were busy with work and didn’t always have time to walk their
+        dogs. Understanding how important regular walks are for a dog’s health
+        and happiness, they started a service to help both dogs and their
+        owners. At first, Paws on the Move was just a one-person operation. The
+        founder would visit clients' homes and take their dogs for walks, giving
+        each dog personal attention. These walks weren’t just about
+        exercise—they were about fun, care, and companionship. Dogs were
+        happier, and owners appreciated the dependable service. As word spread,
+        the company grew. The founder hired a small team of dog walkers who
+        shared the same love for animals and high standards of care. They got to
+        know each dog’s needs, favorite routes, and personalities. This
+        personalized approach made Paws on the Move stand out. Eventually, the
+        company expanded its services to include pet sitting, group walks, and
+        basic training support. It also built strong ties with the local
+        community, supporting shelters and attending pet events. Despite the
+        growth, the company stayed focused on its mission: to offer kind,
+        reliable care that helps dogs stay active and loved. Today, Paws on the
+        Move is a well-known and trusted part of the community. It serves many
+        happy clients while holding onto its original values—treating every dog
+        like family and making sure they get the attention, exercise, and joy
+        they deserve.
+      </p>
+    </div>
+
+    <div class="container" id="container">
+      <!-- Basic Plan -->
+      <!-- Basic Plan -->
+      <div class="pricing-div">
+        <h1>Basic <span>Walk</span> Plan</h1>
+        <ul>
+          <li>3 walks/week (30 min)</li>
+          <li>Custom route & pace</li>
+          <li>Photo walk summaries</li>
+          <li>Flexible 2-hour window</li>
+          <li>Basic leash training</li>
+          <li>Treats & water (optional)</li>
+        </ul>
+        <button>Buy</button>
+      </div>
+
+      <!-- Pro Plan -->
+      <div class="pricing-div">
+        <h1>Pro <span>Walk</span> Plan</h1>
+        <ul>
+          <li>5 walks/week (45 min)</li>
+          <li>Dedicated walker</li>
+          <li>GPS walk reports</li>
+          <li>Flexible scheduling</li>
+          <li>Enrichment play</li>
+          <li>Treat sampler (opt-in)</li>
+        </ul>
+        <button>Buy</button>
+      </div>
+
+      <!-- Elite Plan -->
+      <div class="pricing-div">
+        <h1>Elite <span>Walk</span> Plan</h1>
+        <ul>
+          <li>Daily walks (60 min)</li>
+          <li>Priority scheduling</li>
+          <li>Tailored exercise plan</li>
+          <li>Light training support</li>
+          <li>Medication support</li>
+          <li>Wellness reports</li>
+        </ul>
+        <button>Buy</button>
+      </div>
+    </div>
+
+    <script src="scrollscript.js"></script>
+
+    <script>
+      const changingtext = document.getElementById("changing-text");
+      const timeconsumingtext = "it can take time.";
+      const roughtext = "it can be rough.";
+      let underscreen;
+
+      function checkScreenWidth() {
+        let Screen = window.innerWidth < 801;
+        if (Screen) {
+          underscreen = false;
+          changingtext.textContent = "it can be rough and time consuming.";
+        } else {
+          underscreen = true;
+        }
+      }
+
+      checkScreenWidth();
+
+      function wait(ms) {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+      }
+
+      async function deleterough() {
+        let times = 0;
+
+        while (true) {
+          if (times < roughtext.length) {
+            await wait(100);
+            changingtext.textContent = changingtext.textContent.slice(0, -1);
+            times += 1;
+          } else {
+            times = 0;
+            return;
+          }
+        }
+      }
+
+      async function writetimeconsuming() {
+        let times = 0;
+
+        while (true) {
+          if (times < timeconsumingtext.length) {
+            await wait(100);
+            changingtext.innerHTML += timeconsumingtext.charAt(times);
+            times += 1;
+          } else {
+            times = 0;
+            return;
+          }
+        }
+      }
+
+      async function writerough() {
+        let times = 0;
+
+        while (true) {
+          if (times < roughtext.length) {
+            await wait(100);
+            changingtext.innerHTML += roughtext.charAt(times);
+            times += 1;
+          } else {
+            times = 0;
+            return;
+          }
+        }
+      }
+
+      async function deletetimeconsuming() {
+        let times = 0;
+
+        while (true) {
+          if (times < timeconsumingtext.length) {
+            await wait(100);
+            changingtext.textContent = changingtext.textContent.slice(0, -1);
+            times += 1;
+          } else {
+            times = 0;
+            return;
+          }
+        }
+      }
+
+      async function changetext() {
+        await wait(3000);
+        await deleterough();
+        await wait(2100);
+        await writetimeconsuming();
+        await wait(2100);
+        await deletetimeconsuming();
+        await wait(2100);
+        await writerough();
+      }
+
+      async function runchangetext() {
+        while (true) {
+          await changetext();
+        }
+      }
+
+      if (underscreen == true) {
+        runchangetext();
+      } else {
+        console.log(underscreen);
+      }
+    </script>
+  </body>
+</html>

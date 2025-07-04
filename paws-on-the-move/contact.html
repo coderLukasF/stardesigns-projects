@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+
+    <script
+      src="https://kit.fontawesome.com/c190732b6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./picture-onclick.js"></script>
+    <script src="./mobile-menu.js"></script>
+    <link rel="stylesheet" href="nav-bar.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+      body {
+        margin: 0;
+
+        margin: 0;
+        padding: 0;
+
+        padding-top: 150px;
+      }
+
+      main {
+        flex: 1;
+      }
+
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-image: url("./images/walking-dog-photo.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: repeat;
+        padding-bottom: 90px;
+      }
+
+      .form-div {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .logo-div {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .name {
+        text-align: center;
+        display: block;
+        margin: auto;
+        background-color: black;
+        opacity: 0.5;
+        color: white;
+        width: 45%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        margin-top: 15px;
+
+        border: solid;
+        border-color: rgb(255, 255, 255);
+        border-radius: 5px;
+      }
+
+      .email {
+        text-align: center;
+        display: block;
+        margin: auto;
+        background-color: black;
+        opacity: 0.5;
+        color: white;
+        width: 45%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        margin-top: 30px;
+
+        border: solid;
+        border-color: rgb(255, 255, 255);
+        border-radius: 5px;
+      }
+
+      .subject {
+        text-align: center;
+        display: block;
+        margin: auto;
+        background-color: black;
+        opacity: 0.5;
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        margin-top: 30px;
+
+        border: solid;
+        border-color: rgb(255, 255, 255);
+        border-radius: 5px;
+      }
+
+      .message {
+        resize: none;
+        text-align: center;
+        display: block;
+        margin: auto;
+        background-color: black;
+        opacity: 0.5;
+        color: white;
+        width: 50%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        height: 150px;
+
+        margin-top: 30px;
+
+        border: solid;
+        border-color: rgb(255, 255, 255);
+        border-radius: 5px;
+      }
+
+      .button-div {
+        display: flex;
+        justify-content: center;
+      }
+
+      .send-button {
+        font-family: Roboto, sans-serif, Arial;
+        font-weight: bold;
+
+        width: 300px;
+        height: 50px;
+
+        font-size: 20px;
+        margin-top: 30px;
+
+        background-color: rgb(0, 166, 255);
+        border: solid;
+        border-radius: 7px;
+        cursor: pointer;
+
+        transition: background-color 0.15s;
+      }
+
+      .send-button:hover {
+        background-color: rgb(0, 112, 172);
+      }
+
+      .send-button:active {
+        background-color: rgb(126, 170, 255);
+      }
+
+      @media (max-width: 528px) {
+        .name,
+        .email,
+        .subject,
+        .message {
+          width: 85%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <script src="./nav-bar.js"></script>
+
+    <main>
+      <div class="container">
+        <div class="form-div">
+          <div class="front-page">
+            <div class="logo-div">
+              <img src="./images/logo_stroke.png" class="logo" />
+            </div>
+          </div>
+
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="form"
+            id="contact-form"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="920a8c87-db03-4749-a703-3e9db74885be"
+            />
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Name*"
+              class="name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email*"
+              class="email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message*"
+              class="message"
+              required
+            ></textarea>
+
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+            />
+
+            <div class="button-div">
+              <button type="submit" class="send-button">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
