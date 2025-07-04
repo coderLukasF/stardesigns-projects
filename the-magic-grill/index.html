@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A magical grill that cooks food to perfection."
+    />
+    <title>The Magic Grill</title>
+    <link rel="stylesheet" href="nav-bar.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/c190732b6b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      ol {
+        list-style: decimal;
+        margin-left: 10px;
+        padding-left: 10px;
+      }
+
+      .first-div {
+        text-align: center;
+        margin: auto;
+
+        background-image: url(./images/familyeating.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        padding: 65px 0;
+      }
+
+      .first-div h1 {
+        font-size: 70px;
+        font-family: "Asta Sans";
+        color: rgb(255, 241, 214);
+        background-color: rgba(48, 32, 21, 0.5);
+        padding-bottom: 4.5px;
+        display: block;
+      }
+
+      .about-div {
+        background-color: rgb(36, 36, 36);
+        color: rgb(255, 241, 214);
+        text-align: center;
+        font-family: Roboto;
+        padding: 15px 0;
+      }
+
+      .about-div p {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+      }
+
+      .about-div h2 {
+        font-size: 50px;
+      }
+
+      .scroll-reviews {
+        border: none;
+
+        height: 280px;
+        width: 90%;
+      }
+
+      .second-div {
+        background-color: rgb(206, 166, 92);
+        color: #f7f7f7;
+        padding-bottom: 35px;
+      }
+
+      .second-div h1 {
+        text-align: center;
+        font-size: 57.5px;
+        font-family: Ubuntu;
+      }
+
+      .favorites {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        width: 100%;
+      }
+
+      .favorite {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        background-color: white;
+        margin: 15px;
+        color: black;
+        border-radius: 9px;
+        width: 30%;
+      }
+
+      .favorite .description ul li {
+        color: black;
+        list-style-position: inside;
+      }
+
+      .favorite .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 80%;
+        height: 300px;
+      }
+
+      .favorite .image img {
+        border-radius: 9px;
+        width: 100%;
+        height: 100%;
+      }
+
+      .favorite .description {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .favorite .description h2 {
+        font-size: 50px;
+        font-family: Ubuntu;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        font-family: Roboto;
+      }
+
+      @media (max-width: 1524px) {
+        .favorites {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+        }
+
+        .favorite {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          text-align: center;
+
+          background-color: white;
+          padding: 20px 5px;
+          margin: 15px;
+          color: black;
+          border-radius: 9px;
+          width: 95%;
+        }
+
+        #favtwo {
+          flex-direction: row-reverse;
+        }
+
+        .favorite .description ul li {
+          color: black;
+          list-style-position: inside;
+          font-size: large;
+        }
+
+        .favorite .image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          width: 500px;
+          height: 100%;
+        }
+
+        .favorite .image img {
+          border-radius: 9px;
+          width: 100%;
+          height: 100%;
+        }
+
+        .favorite .description {
+          display: flex;
+          width: 35%;
+          height: 100%;
+        }
+
+        .favorite .description h2 {
+          font-size: 65px;
+          text-overflow: ellipsis;
+        }
+      }
+
+      @media (max-width: 742px) {
+        .favorite .description h2 {
+          font-size: 30px;
+        }
+
+        .favorite .description ul li {
+          font-size: 13.5px;
+        }
+      }
+
+      @media (max-width: 1074px) {
+        .favorite .description h2 {
+          font-size: 50px;
+        }
+
+        .favorite .description ul li {
+          font-size: 17.5px;
+        }
+      }
+
+      @media (max-width: 967px) {
+        .favorites {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+        }
+
+        .favorite {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          text-align: center;
+
+          background-color: white;
+          padding: 20px 5px;
+          margin: 15px;
+          color: black;
+          border-radius: 9px;
+          width: 95%;
+        }
+
+        #favtwo {
+          flex-direction: row-reverse;
+        }
+
+        .favorite .description ul li {
+          color: black;
+          list-style-position: inside;
+        }
+
+        .favorite .image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          width: 500px;
+          height: 100%;
+        }
+
+        .favorite .image img {
+          border-radius: 9px;
+          width: 100%;
+          height: 100%;
+        }
+
+        .favorite .description {
+          display: flex;
+          width: 35%;
+          height: 100%;
+        }
+
+        .favorite .description h2 {
+          font-size: 35px;
+          text-overflow: ellipsis;
+        }
+      }
+
+      /*@media (max-width: 742px) {
+        .favorite .description h2 {
+          font-size: 30px;
+        }
+
+        .favorite .description ul li {
+          font-size: 13.5px;
+        }
+      }
+
+      @media (max-width: 661px) {
+        .favorite .description h2 {
+          font-size: 25px;
+        }
+      }*/
+
+      @media (max-width: 784px) {
+        .favorite,
+        #favtwo {
+          flex-direction: column;
+        }
+
+        .favorite .image {
+          width: 90%;
+        }
+
+        .favorite .description h2 {
+          font-size: 50px;
+        }
+
+        .favorite .description ul li {
+          font-size: 17.5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <main>
+      <div class="first-div">
+        <h1>The Magic Grill</h1>
+      </div>
+      <div class="about-div">
+        <p>
+          Welcome to the Magic Grill, where every meal is a masterpiece! Our
+          grill uses advanced technology to ensure that your food is cooked to
+          perfection every time.
+        </p>
+        <h2>Popular Foods</h2>
+        <ul>
+          <li>Burgers</li>
+          <li>Chicken</li>
+          <li>Hotdogs</li>
+          <li>Steak</li>
+        </ul>
+        <hr width="45%" style="margin: 10px auto" />
+
+        <iframe src="./scroll.html" class="scroll-reviews"></iframe>
+
+        <hr width="45%" style="margin: 10px auto" />
+      </div>
+      <div class="second-div">
+        <h1>Customers favorites:</h1>
+        <hr width="45%" style="margin: 10px auto; color: #f7f7f7" />
+        <div class="favorites">
+          <div class="favorite">
+            <div class="favorite image">
+              <img src="./images/cheeseburger.jpg" alt="Burger" />
+            </div>
+
+            <div class="favorite description">
+              <h2>Cheeseburger</h2>
+              <ul>
+                <li>Top rated, most customers love</li>
+                <li>5-10 Minutes to prepare</li>
+                <li>Organic beef</li>
+                <li>Low calories</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="favorite" id="favtwo">
+            <div class="favorite image">
+              <img src="./images/chickenwing.jpg" alt="Chicken wings" />
+            </div>
+            <div class="favorite description">
+              <h2>Chicken Wings</h2>
+              <ul>
+                <li>Comes with awesome hot cheese sauce</li>
+                <li>3-5 Minutes to prepare</li>
+                <li>Hot, salty and soft</li>
+                <li>Top rated</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="favorite">
+            <div class="favorite image">
+              <img src="./images/salad.jpg" alt="Ceaser salad" />
+            </div>
+
+            <div class="favorite description">
+              <h2>Caesar Salad</h2>
+              <ul>
+                <li>10-15 Minutes to prepare</li>
+                <li>Crispy croutons</li>
+                <li>Fresh cheese</li>
+                <li>Top rated</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>© The Magic Grill 2025</footer>
+    </main>
+
+    <script src="./nav-bar.js"></script>
+    <script src="./mobile-menu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Menu - The Magic Grill</title>
+    <link rel="stylesheet" href="nav-bar.css" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/c190732b6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Ubuntu", sans-serif;
+        background-color: gray;
+        line-height: 1.6;
+        padding: 2rem 1rem;
+
+        color: #181818;
+      }
+
+      .content {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem;
+        background: #fdfdfd;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2.75rem;
+        color: #b22222;
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: #8b0000;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        position: relative;
+      }
+
+      h2::after {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background: #b22222;
+      }
+
+      .container > h2:not(:first-child) {
+        border-top: 1px solid #ddd;
+        padding-top: 2rem;
+      }
+
+      .menu-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 1rem;
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 6px;
+        margin-bottom: 0.75rem;
+      }
+
+      .menu-item:hover {
+        background: #f9f9f9;
+      }
+
+      .item-name {
+        flex: 1;
+        font-weight: 500;
+      }
+
+      .price {
+        white-space: nowrap;
+        font-weight: 600;
+        color: #b22222;
+        font-size: 1rem;
+        margin-left: 1rem;
+      }
+
+      p.note {
+        font-style: italic;
+        font-size: 0.95rem;
+        color: #555;
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 768px) {
+        main {
+          padding: 1.5rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.5rem;
+        }
+
+        .price {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <main class="content">
+      <h1>The Magic Grill Menu</h1>
+
+      <div class="container">
+        <h2>Drinks</h2>
+        <div class="menu-item">
+          <span class="item-name"
+            >Soda – Coke, Pepsi, Dr. Pepper, Sprite, Fanta, or root beer</span
+          ><span class="price">$3.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Lemonade – Pink or regular</span
+          ><span class="price">$2.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Iced Tea</span
+          ><span class="price">$2.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Water</span><span class="price">$1.99</span>
+        </div>
+
+        <h2>Alcohol</h2>
+        <div class="menu-item">
+          <span class="item-name">Bud Light</span
+          ><span class="price">$4.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Coors Light</span
+          ><span class="price">$4.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Miller Light</span
+          ><span class="price">$4.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Spotted Cow</span
+          ><span class="price">$5.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Corona</span><span class="price">$5.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Guinness</span
+          ><span class="price">$5.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Heineken</span
+          ><span class="price">$5.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Buffalo Trace Bourbon</span
+          ><span class="price">$6.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Jack Daniels Whiskey</span
+          ><span class="price">$6.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Bonanza California Cabernet Wine</span
+          ><span class="price">$5.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Apothic Red Blend Wine</span
+          ><span class="price">$5.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Barefoot Pinot Grigio Wine</span
+          ><span class="price">$5.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Kim Crawford Sauvignon Blanc Wine</span
+          ><span class="price">$5.99</span>
+        </div>
+
+        <h2>Appetizers</h2>
+        <div class="menu-item">
+          <span class="item-name"
+            >Mozzarella Sticks – Golden fried and served with marinara
+            sauce</span
+          ><span class="price">$6.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name"
+            >Loaded Fries – Smothered in cheese, bacon, and ranch</span
+          ><span class="price">$7.49</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name"
+            >Warm Pretzel – Comes with hot and warm cheese dip</span
+          ><span class="price">$9.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Warm Spinach Dip with Chips</span
+          ><span class="price">$7.99</span>
+        </div>
+
+        <h2>Grill Favorites</h2>
+        <div class="menu-item">
+          <span class="item-name"
+            >BBQ Ribs – Slow-cooked and glazed in our house BBQ sauce</span
+          ><span class="price">$14.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name"
+            >Grilled Chicken Sandwich – Served with lettuce, tomato, and
+            chipotle mayo</span
+          ><span class="price">$10.49</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name"
+            >Steak – Comes with mashed potatoes, corn, and vegetables</span
+          ><span class="price">$19.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Corn on the Cob</span
+          ><span class="price">$2.99</span>
+        </div>
+
+        <h2>Burgers</h2>
+        <div class="menu-item">
+          <span class="item-name"
+            >Classic Cheeseburger – Beef patty, cheddar, lettuce, tomato, and
+            pickle</span
+          ><span class="price">$9.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name"
+            >Spicy Jalapeño Burger – Pepper jack, jalapeños, and spicy
+            aioli</span
+          ><span class="price">$10.99</span>
+        </div>
+
+        <h2>Salads</h2>
+        <div class="menu-item">
+          <span class="item-name">Chicken Salad</span
+          ><span class="price">$10.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Steak Salad</span
+          ><span class="price">$12.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Salmon Salad</span
+          ><span class="price">$12.99</span>
+        </div>
+
+        <h2>Desserts</h2>
+        <div class="menu-item">
+          <span class="item-name"
+            >Chocolate Lava Cake – Served warm with vanilla ice cream</span
+          ><span class="price">$5.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Cheesecake – Classic New York style</span
+          ><span class="price">$4.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Cookie Cake</span
+          ><span class="price">$5.99</span>
+        </div>
+
+        <h2>Kids</h2>
+        <div class="menu-item">
+          <span class="item-name">Hotdog</span><span class="price">$5.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Grilled Cheese</span
+          ><span class="price">$5.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Chicken Tenders</span
+          ><span class="price">$5.99</span>
+        </div>
+        <div class="menu-item">
+          <span class="item-name">Cheeseburger</span
+          ><span class="price">$5.99</span>
+        </div>
+
+        <p class="note">
+          All kids' meals come with fries and a fruit cup. Choice of drink
+          included.
+        </p>
+      </div>
+    </main>
+
+    <script src="nav-bar.js"></script>
+    <script src="mobile-menu.js"></script>
+  </body>
+</html>

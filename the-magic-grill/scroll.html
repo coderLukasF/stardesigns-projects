@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scrolling Reviews Carousel</title>
+    <style>
+      * {
+        overflow-y: hidden;
+
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+      }
+
+      .carousel-wrapper {
+        width: 90%;
+        padding: 0 10%;
+        overflow: hidden;
+      }
+
+      .carousel-track {
+        display: flex;
+        width: fit-content;
+        animation: scrollRight 30s linear infinite;
+      }
+
+      .review {
+        width: 300px;
+        padding: 20px 20px 50px 20px;
+        margin: 10px;
+        box-sizing: border-box;
+        background: #f5f5f5;
+        border-radius: 5px;
+        flex-shrink: 0;
+        text-align: center;
+      }
+
+      .review img {
+        width: 50%;
+        height: 30px;
+      }
+
+      @keyframes scrollRight {
+        0% {
+          transform: translateX(-50%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+        <div class="review">
+          <h1>Michelle Anderson</h1>
+          <img src="stars/5.png" alt="5 Stars" />
+          <p>
+            I celebrated my birthday here, best service and the food was
+            delicious. Fun time by all!
+          </p>
+        </div>
+        <div class="review">
+          <h1>John Beckett</h1>
+          <img src="stars/5.png" alt="5 Stars" />
+          <p>Burger was great, service was fast! I will come again.</p>
+        </div>
+        <div class="review">
+          <h1>Ashley Jones</h1>
+          <img src="stars/4.5.png" alt="5 Stars" />
+          <p>
+            I ordered the Caesar salad, it was delicious. Staff was kind and
+            restaurant was clean, was a great experience.
+          </p>
+        </div>
+        <div class="review">
+          <h1>Alice Patterson</h1>
+          <img src="stars/5.png" alt="5 Stars" />
+          <p>
+            I went to the Magic Grill to celebrate my anniversary, had the best
+            time. Food was awesome and my server was the sweetest.
+          </p>
+        </div>
+        <div class="review">
+          <h1>Jason Hughes</h1>
+          <img src="stars/4.png" alt="5 Stars" />
+          <p>Great experience, will come back soon.</p>
+        </div>
+        <div class="review">
+          <h1>Max Alleman</h1>
+          <img src="stars/5.png" alt="5 Stars" />
+          <p>
+            The chicken wings are fantastic! Server was very kind, great time!
+          </p>
+        </div>
+        <div class="review">
+          <h1>Rachel Greene</h1>
+          <img src="stars/4.5.png" alt="5 Stars" />
+          <p>
+            My daughter and I had the best time, food was delicious and service
+            was fast. Great place!
+          </p>
+        </div>
+        <div class="review">
+          <h1>Adam Moore</h1>
+          <img src="stars/5.png" alt="5 Stars" />
+          <p>
+            Best time celebrating my retirement, food was amazing and staff were
+            so considerate. Thanks for the memories!
+          </p>
+        </div>
+        <div class="review">
+          <h1>Madison Powell</h1>
+          <img src="stars/4.png" alt="5 Stars" />
+          <p>
+            I went to Magic Grill Friday night and had the best time, good
+            company and even better food!
+          </p>
+        </div>
+        <div class="review">
+          <h1>Katie Linden</h1>
+          <img src="stars/5.png" alt="5 Stars" />
+          <p>
+            Thanks for a wonderful time, my family loved it and the food was
+            fantastic!
+          </p>
+        </div>
+
+        <div class="review">
+          <h1>Michelle Anderson</h1>
+          <img src="stars/5.png" alt="5 Stars" />
+          <p>
+            I celebrated my birthday here, best service and the food was
+            delicious. Fun time by all!
+          </p>
+        </div>
+        <div class="review">
+          <h1>John Beckett</h1>
+          <img src="stars/5.png" alt="5 Stars" />
+          <p>Burger was great, service was fast! I will come again.</p>
+        </div>
+        <div class="review">
+          <h1>Ashley Jones</h1>
+          <img src="stars/4.5.png" alt="5 Stars" />
+          <p>
+            I ordered the Caesar salad, it was delicious. Staff was kind and
+            restaurant was clean, was a great experience.
+          </p>
+        </div>
+        <div class="review">
+          <h1>Alice Patterson</h1>
+          <img src="stars/5.png" alt="5 Stars" />
+          <p>
+            I went to the Magic Grill to celebrate my anniversary, had the best
+            time. Food was awesome and my server was the sweetest.
+          </p>
+        </div>
+        <div class="review">
+          <h1>Jason Hughes</h1>
+          <img src="stars/4.png" alt="5 Stars" />
+          <p>Great experience, will come back soon.</p>
+        </div>
+        <div class="review">
+          <h1>Max Alleman</h1>
+          <img src="stars/5.png" alt="5 Stars" />
+          <p>
+            The chicken wings are fantastic! Server was very kind, great time!
+          </p>
+        </div>
+        <div class="review">
+          <h1>Rachel Greene</h1>
+          <img src="stars/4.5.png" alt="5 Stars" />
+          <p>
+            My daughter and I had the best time, food was delicious and service
+            was fast. Great place!
+          </p>
+        </div>
+        <div class="review">
+          <h1>Adam Moore</h1>
+          <img src="stars/5.png" alt="5 Stars" />
+          <p>
+            Best time celebrating my retirement, food was amazing and staff were
+            so considerate. Thanks for the memories!
+          </p>
+        </div>
+        <div class="review">
+          <h1>Madison Powell</h1>
+          <img src="stars/4.png" alt="5 Stars" />
+          <p>
+            I went to Magic Grill Friday night and had the best time, good
+            company and even better food!
+          </p>
+        </div>
+        <div class="review">
+          <h1>Katie Linden</h1>
+          <img src="stars/5.png" alt="5 Stars" />
+          <p>
+            Thanks for a wonderful time, my family loved it and the food was
+            fantastic!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

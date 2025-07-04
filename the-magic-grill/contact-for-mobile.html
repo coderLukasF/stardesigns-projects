@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - The Magic Grill</title>
+    <link rel="stylesheet" href="nav-bar.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/c190732b6b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        background-image: url(images/familyeating.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+
+        width: 100%;
+
+        display: flex;
+        gap: 0;
+        align-items: center;
+        flex-direction: row;
+      }
+
+      .container h1 {
+        font-family: Ubuntu;
+        margin-bottom: 15px;
+        color: white;
+      }
+
+      .info-div {
+        margin: auto;
+        width: 85%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.95);
+        text-align: center;
+      }
+
+      .info-div-heading h1 {
+        color: black;
+        padding-top: 15px;
+      }
+
+      .info-div-heading p {
+        color: black;
+        font-family: Roboto;
+        margin-bottom: 15px;
+      }
+
+      .message-div {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        font-family: Roboto;
+      }
+
+      .information {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .info {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        font-family: Roboto;
+
+        width: 95%;
+        padding: 10px;
+        margin: 2.5px;
+
+        background-color: rgb(197, 197, 197);
+      }
+
+      .info i {
+        margin: 0 5px;
+      }
+
+      .message-div h1 {
+        color: black;
+      }
+
+      form input {
+        font-family: Roboto;
+        text-align: center;
+        background-color: rgb(231, 231, 231);
+        border: 0.5px solid gray;
+        border-radius: 3.5px;
+        padding: 4px 15%;
+
+        margin: 5px;
+      }
+
+      form textarea {
+        text-align: center;
+        width: 90%;
+        height: 20vh;
+
+        margin-top: 5px;
+      }
+
+      form button {
+        background-color: rgb(48, 48, 48);
+        border: 0.5px solid gray;
+        padding: 10px 45px;
+
+        transition: opacity 0.15s;
+      }
+
+      form button:hover {
+        opacity: 0.9;
+      }
+
+      form button:active {
+        opacity: 0.7;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+    <script src="nav-bar.js"></script>
+    <script src="mobile-menu.js"></script>
+
+    <script>
+      function redirectIfDesktop() {
+        if (window.innerWidth >= 801) {
+          window.location.href = "contact.html";
+        }
+      }
+
+      // Initial check
+      redirectIfDesktop();
+
+      // Optional: re-check on resize
+      window.addEventListener("resize", redirectIfDesktop);
+    </script>
+
+    <main>
+      <div class="container">
+        <div class="info-div">
+          <div class="info-div-heading">
+            <h1>Need help? Contact us</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus deserunt debitis sit impedit eum iure eius itaque
+              voluptatem maiores. Exercitationem modi, doloremque quisquam ipsum
+              corrupti et soluta magni. Sint, aspernatur.
+            </p>
+          </div>
+
+          <div class="information">
+            <div class="info">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>123 Maplewood Lane Springfield, CA 90210 United States</p>
+            </div>
+            <div class="info">
+              <i class="fa-solid fa-envelope"></i>
+              <p>themagicgrill.restaurant@gmail.com</p>
+            </div>
+            <div class="info">
+              <i class="fa-solid fa-phone"></i>
+              <p>+1 (555) 017-8433</p>
+            </div>
+          </div>
+
+          <div class="message-div">
+            <h1>Message us</h1>
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              id="form"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="2808a083-93fd-49d6-8313-102ce08d9a13"
+              />
+              <input
+                type="checkbox"
+                name="botcheck"
+                id=""
+                style="display: none"
+              />
+              <label for="name">Full Name</label><br />
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="John Doe"
+                required
+              /><br />
+              <label for="email">Email Address</label><br />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="you@company.com"
+                required
+              /><br />
+              <label for="phone">Phone Number</label><br />
+              <input
+                type="text"
+                name="phone"
+                id="phone"
+                placeholder="+1 (555) 1234-567"
+                required
+              /><br />
+              <label for="message">Your Message</label><br />
+              <textarea
+                rows="5"
+                name="message"
+                id="message"
+                placeholder="Your Message"
+                required
+              ></textarea
+              ><br /><br />
+
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Magic Grill</title>
+    <link rel="stylesheet" href="nav-bar.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/c190732b6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Asta+Sans:wght@300..800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto;
+      }
+
+      .title-div {
+        background-image: url(images/familyeating.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 60px 0;
+
+        color: #fff1d6;
+      }
+
+      #title {
+        text-align: center;
+        font-size: 50px;
+        background-color: rgba(48, 32, 21, 0.5);
+      }
+
+      #h2-title {
+        text-align: center;
+        background-color: rgba(48, 32, 21, 0.5);
+      }
+
+      .first-div {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        gap: 5px;
+        background-color: #242424;
+        color: #f7f7f7;
+      }
+
+      .about {
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+      }
+
+      .about hr {
+        width: 75%;
+        margin: 15px 0;
+      }
+
+      .chefs-quote {
+        border: #f7f7f7 2px solid;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .image {
+        width: 45%;
+        height: 100%;
+        padding: 15px;
+
+        display: flex;
+        justify-content: center;
+        margin: auto;
+      }
+
+      .image img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+      }
+
+      .second-div ul,
+      .second-div li {
+        color: black;
+        list-style: disc;
+        list-style-position: inside;
+      }
+
+      .second-div {
+        margin-top: 20px;
+      }
+
+      .second-div h1 {
+        font-size: 35px;
+        margin-bottom: 7.5px;
+      }
+
+      .second-div ul {
+        margin: 15px 0;
+      }
+
+      .second-div li {
+        color: white;
+      }
+
+      .third-div {
+        padding: 15px;
+        color: white;
+        background-color: #e2e2ca;
+        color: black;
+      }
+
+      .third-div li {
+        color: black;
+        margin: 5px 15px;
+      }
+
+      .fourth-div {
+        padding: 15px;
+        background-color: #ccccb4;
+      }
+
+      @media (max-width: 1090px) {
+        .first-div {
+          flex-direction: column-reverse;
+        }
+
+        .about {
+          flex-direction: column;
+          width: 90%;
+          text-align: center;
+        }
+
+        .image {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <main>
+      <div class="title-div">
+        <h1 id="title">About The Magic Grill</h1>
+        <h2 id="h2-title">
+          Welcome to The Magic Grill — a place born from smoke, flame, and a
+          deep love for gathering around the fire.
+        </h2>
+      </div>
+
+      <div class="first-div">
+        <div class="first-div about">
+          <p>
+            Our story doesn’t begin in a fancy culinary school. It starts in a
+            backyard — with a beat-up charcoal grill, a stack of hand-cut wood,
+            and a stubborn dream. What began as weekend cookouts for friends
+            turned into neighborhood gatherings, then block parties, and
+            eventually, the idea that sparked it all: What if we made this magic
+            happen every day? At The Magic Grill, we’re all about honest
+            grilling with bold flavors and zero shortcuts. Every rib, brisket,
+            and burger is seasoned with purpose and grilled with pride. Whether
+            it’s our house-rubbed smoked meats, flame-seared veggies, or just
+            the perfect sear on a medium-rare steak — everything we serve
+            carries the unmistakable taste of fire and craftsmanship. But it’s
+            not just about what’s on the plate. It's about bringing people
+            together. Around tables. Around stories. Around good food that feels
+            like home. So whether you're a grill master in your own right or
+            just here for the juiciest burger of your life — welcome to The
+            Magic Grill. Pull up a chair. You're family now.
+          </p>
+          <hr />
+          <div class="first-div chefs-quote">
+            <h3>Chefs quote</h3>
+            <p>
+              "Anyone can cook with heat—what matters is cooking with heart. At
+              The Magic Grill, every dish starts with a memory and ends with a
+              smile. That’s the kind of magic we serve here." — Marcus Lane,
+              Founder & Head Grillmaster"
+            </p>
+          </div>
+          <div class="second-div">
+            <h1>Our backstory</h1>
+            The Magic Grill began with a fire—literally. Years ago, our founder,
+            Marcus, accidentally turned a backyard BBQ into a neighborhood block
+            party when the aroma of his hickory-smoked ribs drifted down the
+            street. People showed up curious, left full, and came back hungry
+            the next day. That spark of connection, community, and unforgettable
+            flavor became the foundation of what we now call The Magic Grill.
+            What started as one man, one grill, and a passion for bold, soulful
+            cooking has grown into a beloved neighborhood spot where families
+            gather, friends celebrate, and no one ever leaves hungry. We believe
+            in keeping things real:
+            <ul>
+              <li>Real ingredients</li>
+              <li>Real fire</li>
+              <li>Real hospitality</li>
+            </ul>
+            Whether it’s a perfectly seared steak, a juicy burger, or
+            slow-smoked brisket that melts in your mouth, everything we serve is
+            made with care—and just a little bit of magic.
+          </div>
+        </div>
+        <div class="first-div image">
+          <img src="images/man_grilling.jpg" alt="Man grilling" />
+        </div>
+      </div>
+      <div class="third-div">
+        <h1>Why people love the magic grill</h1>
+        <ul>
+          <li>Authentic Grilling - No shortcuts</li>
+          <li>
+            Locally Sourced Ingredients - Supporting local farmers and butchers
+            to bring you the best
+          </li>
+          <li>Family Vibes - Cozy, unpretentious, and made for connection.</li>
+          <li>
+            SIgnature Sauces & Rubs - Crafted in-house and always made fresh
+          </li>
+          <li>
+            Legendary Specials - From "Brisket Fridays” to "Smashburger
+            Sundays", there's always something new to try.
+          </li>
+        </ul>
+      </div>
+      <div class="fourth-div">
+        <h1>
+          Our promise
+          <i class="fa-solid fa-heart" style="display: inline-block"></i>
+        </h1>
+        <p>
+          At The Magic Grill, we don't just serve food—we serve memories. We
+          treat every guest like family, every meal like a celebration, and
+          every plate like a chance to wow you. Come hungry. Leave happy. Return
+          often.
+        </p>
+      </div>
+    </main>
+
+    <script src="nav-bar.js"></script>
+    <script src="mobile-menu.js"></script>
+  </body>
+</html>
