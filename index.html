@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>stardesigns - Page under construction</title>
+
+    <script
+      src="https://kit.fontawesome.com/c190732b6b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/mobile-menu.js"></script>
+    <script src="/picture-onclick.js"></script>
+    <link rel="stylesheet" href="/nav-bar.css" />
+    <link rel="icon" type="image/x-icon" href="/images/StarDesigns_icon.png" />
+    <style>
+      @font-face {
+        font-family: futuralight;
+        src: url(/fonts/futuralight.ttf);
+      }
+
+      body {
+        background-image: url("/images/space-background.jpg");
+        background-repeat: repeat-y;
+        background-size: cover;
+        background-position: center;
+        color: #333;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 100px;
+        margin: 0;
+        color: #72b6ff;
+        font-family: futuralight;
+        font-weight: 1000;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin: 20px 0;
+        color: rgb(204, 204, 204);
+      }
+
+      .websites {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        width: 96.5%;
+        background-color: rgba(151, 151, 151, 0.1);
+        border-radius: 15px;
+        padding: 5px;
+      }
+
+      .website {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+
+      .website img {
+        width: 200px;
+        height: 200px;
+      }
+
+      /*.website a {
+        color: #439eff;
+        font-weight: 550;
+      }
+
+      .website a:hover {
+        text-decoration: underline;
+        text-decoration-color: #439eff;
+      }*/
+
+      @media (max-width: 735px) {
+        .website img {
+          width: 100px;
+          height: 100px;
+        }
+
+        h1 {
+          font-size: 75px;
+        }
+      }
+
+      @media (max-width: 377px) {
+        h1 {
+          font-size: 55px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="/images/stardesignslogo.png"
+        class="nav-logo"
+        onclick="pictureonclick()"
+      />
+      <nav>
+        <ul class="nav__links">
+          <li>
+            <a href="https://www.stardesignsstudio.com/index.html">Home</a>
+          </li>
+          <li>
+            <a href="https://www.stardesignsstudio.com/about.html">About</a>
+          </li>
+          <li>
+            <a href="https://www.stardesignsstudio.com/pricing-plans.html"
+              >Pricing</a
+            >
+          </li>
+          <a href="https://www.stardesignsstudio.com/contact.html"
+            ><button class="nav-button">Contact</button></a
+          >
+        </ul>
+      </nav>
+
+      <div class="mobile-nav">
+        <i class="fa-solid fa-bars" onclick="toggleMobileNavBar(this)"></i>
+        <ul class="mobile-links">
+          <img src="/images/stardesignslogo.png" class="nav-logo" />
+          <li>
+            <a href="https://www.stardesignsstudio.com/index.html">Home</a>
+          </li>
+          <li>
+            <a href="https://www.stardesignsstudio.com/about.html">About</a>
+          </li>
+          <li>
+            <a href="https://www.stardesignsstudio.com/pricing-plans.html"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a href="https://www.stardesignsstudio.com/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <h1>Stardesigns projects</h1>
+    <p>These are some websites I have coded:</p>
+    <div class="websites">
+      <div class="website">
+        <a href="paws-on-the-move/">
+          <img src="paws-on-the-move/logo.png" alt="Paws on the move logo" />
+          <a href="paws-on-the-move/">Paws on the move </a>
+        </a>
+      </div>
+      <div class="website">
+        <a href="the-magic-grill/">
+          <img src="the-magic-grill/logo.png" alt="The Magic Grill Logo" />
+          <a href="the-magic-grill/">The Magic Grill </a>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
